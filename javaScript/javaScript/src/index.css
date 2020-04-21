@@ -1,0 +1,161 @@
+html , body{
+    height: 100%;
+    overflow: hidden;
+}
+/* 头部信息 */
+.header{
+    height: 70px;
+    background-color: #354457;
+    line-height: 70px;
+}
+.header .logo{
+    width: 200px;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #b3bcc5;   
+}
+.header .logo img{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+/* 学生管理系统 */
+.mume{
+    width: 200px;   
+    height: calc(100% - 70px);
+    line-height: 40px;
+    color: #b3bcc5;
+    background-color: #4d5e70;
+    float: left;
+}
+.mume dl dt{
+    padding-left: 8px;
+}
+.mume dl dd{
+    padding-left: 30px;
+    cursor: pointer;
+}
+.mume dl dd:hover{
+    color: #354457;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.mume dl dd.active{
+    background-color: #ddd;
+    color: #354457;
+}
+
+/* 学生时列表 */
+.center{
+    width: calc(100% - 200px);
+    height: calc(100% - 70px);
+    float: left;   
+    background-color: #eee;
+
+}
+.center>div{
+    display: none;
+}
+.center div.content-active{
+    display: block;
+}
+
+.center  form{
+
+    width: 450px;
+    margin: 100px auto;
+}
+.center  form label{
+    width: 100px;
+    text-align: right;
+    display: inline-block;
+}
+.center  form label.sex{
+    width: auto;
+}
+form>div{
+    height: 30px;
+}
+ .btn{
+    margin-left: 60px;
+
+    padding: 5px 20px;
+}
+#student-list .btn{
+    margin: 0 auto;
+}
+#student-list table{
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    cursor: pointer;
+}
+#student-list table thead{
+    background-color: #e3e8ee;
+    color: #646987;
+}
+#student-list table tbody{
+    background-color: #fff;
+}
+#student-list table .btn{
+    padding: 3px 10px;
+    color: #fff;
+    border: 10px ;
+     border-radius: 5px;
+     overflow: hidden;
+}
+#student-list table .btn.edit{
+    background-color: green;
+}
+#student-list table .btn.delete{
+    background-color: crimson;
+}
+
+
+/* 编辑表单 */
+.model-centent{
+    width: 500px;
+    height: 450px;
+/* position: fixed; */
+position: fixed;
+top:50%;
+left: 50%;
+margin-top: -225px;
+margin-left: -250px;
+font-size: 14px;
+background-color:#fff;
+}
+.mask{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.model-centent form{
+    margin: 20px auto;
+}
+
+.model-centent  h3{
+    display: block;
+    padding: 20px 20px;
+}
+.modal{
+    display: none;
+}
+#student-edit-btn{
+    display: block;
+    margin-left: 60px;
+}
+/* 分页按钮 */
+#turn-page {
+    text-align: center;
+    margin-top: 20px;
+}
+#turn-page .prev, #turn-page .next {
+    padding: 5px 10px;
+    border: 1px solid black;
+    background-color: #eee;
+}
