@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="src/Reset.css">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="logo">
+            <img src="src/image/logo.ico" alt="">
+            <span>渡一教育</span>
+        </div>
+     </div>
+    <div class="mume" >
+            <dl class="mumelist">
+                <dt>学生管理</dt>
+                <dd class="active" data-id="student-list">学生列表</dd>
+                <dd data-id="student-add">新增学生</dd>
+            </dl>
+    </div>
+    <!-- 内容 -->
+    <div class="center">
+        <!-- 新增学生页 -->
+       <div id="student-add"  >
+           <form id="student-add-from" a>
+                <div>
+                    <label for="name" >姓名：</label>
+                    <input id="name" name="name" type="text">
+                </div>
+                <div>
+                    <label for='sex' >性别：</label>
+                    <input  type="radio" name="sex" id="male" value="male" checked >
+                    
+                    <label class="sex" for="male">男</label>
+
+                    <input  type="radio" name="sex" value="female" id="female">
+                    <label class="sex" for="female">女</label>
+                    
+                </div>
+                <div>
+                    <label for="email" >邮箱：</label>
+                    <input id="email" name="email" type="text" >
+                </div>
+                <div>
+                    <label for="sNo" >学号：</label>
+                    <input id="sNo" name="sNo" type="text">
+                </div>
+                <div>
+                    <label for='birth'>出生年:</label>
+                    <input id="birth" name="birth" type="text">
+                </div>
+                <div>
+                    <label for='phone'>手机号:</label>
+                    <input id="phone" name="phone" type="text">
+                </div>
+                <div>
+                    <label for='address'>住址:</label>
+                    <input id="address" name="address" type="text">
+                </div>
+                <div>
+                    <button id="student-add-btn"  class="btn">提交</button>
+                    <button class="btn">重置</button>
+                </div>
+           </form>
+       </div>
+       <!-- 展示学生页 -->
+       <div id="student-list"  class="content-active">
+           <table>
+               <thead >
+                   <tr>
+                       <th>学号</th>
+                       <th>姓名</th>
+                       <th>性别</th>
+                       <th>邮箱</th>
+                       <th>年龄</th>
+                       <th>手机号</th>
+                       <th>住址</th>
+                       <th>操作</th>
+                   </tr>
+               </thead>
+               <tbody id="tbody">
+                   <tr>
+                       <td>001</td>
+                       <td>王</td>
+                       <td>男</td>
+                       <td>1908737@qq.com</td>
+                       <td>16</td>
+                       <td>13456789</td>
+                       <td>江西</td>
+                       <td>
+                           <button class="btn edit">编辑</button>
+                           <button class="btn delete">删除</button>
+                       </td>
+                   </tr>
+               </tbody>
+           </table>
+           <div id="turn-page">
+               <button class="prev">上一页</button>
+               <button class="next">下一页</button>
+           </div>
+           <!-- 遮罩层 -->
+           <div class="modal">
+               <div class="mask"></div>
+               <div class="model-centent">
+                   <h3>编辑表单</h3>
+                   <form id="student-edit-from" a>
+                    <div>
+                        <label for="edit-name" >姓名：</label>
+                        <input id="edit-name" name="name" type="text">
+                    </div>
+                    <div>
+                        <label for='sex' >性别：</label>
+                        <input  type="radio" name="sex" id="edit-male" value="male" checked >
+                        
+                        <label class="sex" for="male">男</label>
+    
+                        <input  type="radio" name="sex" value="female" id="edit-female">
+                        <label class="sex" for="female">女</label>
+                        
+                    </div>
+                    <div>
+                        <label for="edit-email" >邮箱：</label>
+                        <input id="edit-email" name="email" type="text" >
+                    </div>
+                    <div>
+                        <label for="edit-sNo" >学号：</label>
+                        <input id="edit-sNo" disabled name="sNo" type="text">
+                    </div>
+                    <div>
+                        <label for='edit-birth'>出生年:</label>
+                        <input id="edit-birth" name="birth" type="text">
+                    </div>
+                    <div>
+                        <label for='edit-phone'>手机号:</label>
+                        <input id="edit-phone" name="phone" type="text">
+                    </div>
+                    <div>
+                        <label for='edit-address'>住址:</label>
+                        <input id="edit-address" name="address" type="text">
+                    </div>
+                    <div>
+                        
+                        <button id="student-edit-btn"  class="btn">提交</button>
+                       
+                    </div>
+               </form>
+               </div>
+           </div>
+       </div>
+    </div>
+    <script src="src/index.js">
+
+    </script>
+</body>
+</html>
